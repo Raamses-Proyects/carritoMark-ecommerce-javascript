@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Producto - nombre producto</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarritMark - Carrito de compras, parte de los proyectos personales de 
+    Raamses Chávez. Tecnologias: HTML, CSS, JavaScript">
+    <link rel="icon" type="image/svg+xml" href="./img/logo.svg">
+    <script src="js/producto-individual.js" type="module"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__barra contenedor">
+            <a href="index.html">
+                <h1 class="header__heading">CarritoMark</h1>
+            </a>
+
+            <form class="buscador">
+                <div class="buscador__contenido">
+                    <input class="buscador__input" id="buscador" type="text" placeholder="Nombre del producto">
+                    <button class="buscador__boton" type="submit" title="Buscar productos">
+                        <span class="buscador__icono" className='formulario__icon'></span>
+                    </button>
+                </div>
+                <div class="buscador__coincidencias display-none">
+                    <a class="buscador__enlace" href="producto-individual.html">jabon</a>
+                    <a class="buscador__enlace" href="producto-individual.html">cheetos</a>
+                    <a class="buscador__enlace" href="producto-individual.html">limon</a>
+                </div>
+            </form>
+
+            <a href="carrito.html" class="carrito" title="Ir al carrito">
+                <span class="carrito__contador">0</span>
+                <img class="carrito__imagen" src="img/carrito.svg" alt="imagen carrito">
+            </a>
+        
+        </div> <!-- .header__barra -->
+    </header>
+
+
+    <main>
+        <section class="producto-individual">
+            
+        </section>
+    </main>
+
+    <section class="otros">
+        <h3>Complemetos para tu compra</h3>
+        <div class="otros__contenido">
+
+        </div>
+    </section>
+
+    <footer class="footer mt-5">
+        <div class="contenedor">
+            <div class="footer__grid">
+                <details class="footer__bloque">
+                    <summary class="footer__summary black">CarritoMark - Catálogo Extendido</summary>
+                    <p class="footer__summary">Términos y Condiciones</p>
+                    <p class="footer__summary">Legales</p>
+                    <p class="footer__summary">Formas de Pago</p>
+                    <p class="footer__summary">Tiempos de Entrega</p>
+                    <p class="footer__summary">Devoluciones en Sitio</p>
+                    <p class="footer__summary">Preguntas Frecuentes</p>
+                    <p class="footer__summary">Compré en Línea y Quiero Facturar</p>
+                    <p class="footer__summary">Centro de Ayuda</p>
+                    <p class="footer__summary">Seguimiento del Pedido</p>
+                </details>
+                <details class="footer__bloque">
+                    <summary class="footer__summary black">CarritoMark - Súper a Domicilio</summary>
+                    <p class="footer__summary">Términos y Condiciones</p>
+                    <p class="footer__summary">Legales</p>
+                    <p class="footer__summary">Formas de Pago</p>
+                    <p class="footer__summary">Tiempos de Entrega</p>
+                    <p class="footer__summary">Política de Devoluciones</p>
+                    <p class="footer__summary">Preguntas Frecuentes</p>
+                    <p class="footer__summary">Compré en Línea y Quiero Facturar</p>
+                </details>
+                <details class="footer__bloque">
+                    <summary class="footer__summary black">CarritoMark México</summary>
+                    <p class="footer__summary">Aviso de Privacidad eCommerce</p>
+                    <p class="footer__summary">Aviso de Privacidad para Autoservicio</p>
+                    <p class="footer__summary">Propiedad Intelectual</p>
+                    <p class="footer__summary">Pago Seguro</p>
+                    <p class="footer__summary">Suscríbete a Newsletter</p>
+                    <p class="footer__summary">Mapa del Sitio</p>
+                    <p class="footer__summary">Servicios en Tienda</p>
+                    <p class="footer__summary">BAIT</p>
+                    <p class="footer__summary">BAIT Legales</p>
+                </details>
+                <details class="footer__bloque">
+                    <summary class="footer__summary black">Tiendas y Empresas</summary>
+                    <p class="footer__summary">Sitio Corporativo</p>
+                    <p class="footer__summary">Vende con nosotros</p>
+                    <p class="footer__summary">Relación Inversionistas</p>
+                    <p class="footer__summary">Empleo en CarritoMark</p>
+                    <p class="footer__summary">Buscador de Tiendas</p>
+                </details>
+            </div>
+            <div class="footer__copy">
+                <p class="footer__texto">CarritoMark México y Centroamérica &copy; 2023 | Siempre encuentras todo y pagas menos</p>
+                <p class="footer__texto">Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
