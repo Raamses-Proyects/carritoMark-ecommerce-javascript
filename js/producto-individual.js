@@ -1,3 +1,4 @@
+import { db } from './database/db.js';
 import { PRODUCTOSOBJ, ARRAYPRODUCTOS } from './constantes/index.js';
 import { listaProductos } from './app.js';
 import { sincronizarStorage, getItemLocalStorage, contadorCarrito } from './helpers/index.js';
@@ -8,7 +9,7 @@ import { sincronizarStorage, getItemLocalStorage, contadorCarrito } from './help
 window.onload = () => {
     seccionProductoIndividual(getItemLocalStorage(PRODUCTOSOBJ));
     contadorCarrito(getItemLocalStorage(ARRAYPRODUCTOS));
-    listaProductos('.otros__contenido', 6);
+    listaProductos('.otros__contenido', 6, db);
 }
 
 

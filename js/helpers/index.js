@@ -23,6 +23,13 @@ export function contadorCarrito(carritoArray) {
     contadorSpan.innerHTML = getItemLocalStorage(CONTADOR);
 }
 
+export function extraerPrecio(precio) {
+    precio = precio.replace('$', '');
+    precio = precio.replace(',', '');
+    const precioFormateado = parseFloat(precio);
+    return precioFormateado;
+}
+
 export const formatearCantidad = (cantidad) => {
     return cantidad.toLocaleString('en-US', {
         style: 'currency',
@@ -62,7 +69,7 @@ export function buscador(arrayProductos) {
         }
 
       
-        // Filtrando la BD solo por las coincidencias que el usario escriba 
+        // Filtrando la BD solo por las coincidencias que el usuario escriba 
         let arrayFiltrado = arrayProductos.filter( (producto) => producto.nombre.includes((texto).toLowerCase()) );
         limpiarHTML('.buscador__coincidencias');
         if( arrayFiltrado.length > 0 ) {

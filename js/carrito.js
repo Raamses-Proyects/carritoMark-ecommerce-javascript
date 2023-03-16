@@ -1,3 +1,4 @@
+import { db } from './database/db.js';
 import { ARRAYPRODUCTOS } from './constantes/index.js';
 import { listaProductos } from './app.js';
 import { 
@@ -5,7 +6,8 @@ import {
         contadorCarrito, 
         formatearCantidad, 
         sincronizarStorage, 
-        limpiarHTML } from './helpers/index.js';
+        limpiarHTML,
+        extraerPrecio } from './helpers/index.js';
 
 
 
@@ -13,7 +15,7 @@ import {
 window.onload = () => {
     contadorCarrito(getItemLocalStorage(ARRAYPRODUCTOS));
     appCarrito(getItemLocalStorage(ARRAYPRODUCTOS));
-    listaProductos('.otros__contenido', 6);
+    listaProductos('.otros__contenido', 6, db);
     ocultar(getItemLocalStorage(ARRAYPRODUCTOS).length);
 }
 
@@ -304,12 +306,6 @@ function eliminarProducto(id) {
 
 
 // Helpers
-function extraerPrecio(precio) {
-    precio = precio.replace('$', '');
-    precio = precio.replace(',', '');
-    const precioFormateado = parseFloat(precio);
-    return precioFormateado;
-}
 function ocultar(length) {
     const elemento1 = document.querySelector('.productos-carrito__info');
     const elemento2 = document.querySelector('.productos-carrito__contenido');
