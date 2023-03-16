@@ -286,6 +286,7 @@ a {
     border-radius: .5rem;
     color: var(--gris);
     font-weight: 700;
+    background-color: var(--blanco);
 }
 
 
